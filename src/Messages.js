@@ -38,14 +38,18 @@ class Messages extends Component {
 
 		return(
 
-			<div>
+		<div>
 
 
-		<li><span className="message" onMouseEnter={this.showUsername} onMouseLeave={this.hideUsername}>{msg.message}</span>
-			{this.state.showUsername && (
-				<span className="user-name">{name}</span>
-			)}
-		</li>
+			<li>
+				<span className="message" onMouseEnter={this.showUsername} onMouseLeave={this.hideUsername}>
+					{msg.message}
+				</span>
+				
+				{this.state.showUsername && (
+					<span className="user-name">{name}</span>
+				)}
+			</li>
 			</div>
 		);
 
