@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Messages  from './Messages';
 
-import { getChatLog, getMembersLog } from './service';
+import { getChatLog, getMembersData } from './service';
 
 import moment from 'moment';
 
@@ -87,7 +87,7 @@ const mapDispatchToProps = dispatch => {
 
 	return bindActionCreators({
 		getChatLog,
-		getMembersLog
+		getMembersData
 
 	 }, dispatch);
 
