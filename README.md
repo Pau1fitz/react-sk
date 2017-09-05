@@ -1,7 +1,3 @@
-# NowTV React Interview
-
-![NowTV](./logo.png)
-
 A simple React + Redux project to retrieve, render and manipulate data returned from an API.
 
 ## Commands
@@ -33,6 +29,3 @@ Do not modify `data.js` to achieve these tasks, and do not worry about the styli
 
 5. Sort the messages by time
 
-## Submission
-
-Please upload your solution to your github account as a public repository, and send the URL to us.
