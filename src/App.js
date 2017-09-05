@@ -14,34 +14,36 @@ class App extends Component {
 
 	componentDidMount() {
 
-		const { getChatLog, getMembersLog } = this.props;
+		const { getChatLog, getMembersData } = this.props;
 
 		getChatLog();
-		getMembersLog();
+		getMembersData();
 
 	}
 
 	getMemberDetails(userId) {
 
-		return this.props.members.find((member) => member.id === userId);
+		const { members } = this.props;
+
+		return members.find(member => member.id === userId);
 
 	}
 
 	sortMessagesByDate(messages) {
 
-		return this.props.messages.sort((a, b) => {
+		return (messages && messages.length > 0) ? messages.sort((a, b) => {
 
 			return moment(b.timestamp) - moment(a.timestamp);
 
-		});
+		}) : [];
 
 	}
 
 	render() {
 
-		const { members, messages } = this.props;
+		const { messages } = this.props;
 
-		let messageArr = this.sortMessagesByDate(this.props.messages).map(msg => {
+		let messageArr = this.sortMessagesByDate(messages).map(msg => {
 
 			const defaultImage = 'http://dummyimage.com/100x100.jpg/dddddd/000000';
 			let member = this.getMemberDetails(msg.userId);
@@ -52,7 +54,7 @@ class App extends Component {
 
 				<div className="messages-container" key={msg.id}>
 					<span>{time}</span>
-					<img src={member.avatar || defaultImage } />
+					<img alt="avatar" src={member.avatar || defaultImage } />
 					<Messages msg={msg} name={name} />
 				</div>
 			);
@@ -70,7 +72,7 @@ App.propTypes = {
 	messages: PropTypes.array,
 	members: PropTypes.array,
 	getChatLog: PropTypes.func,
-	getMembersLog: PropTypes.func
+	getMembersData: PropTypes.func
 };
 
 const mapStateToProps = state => {

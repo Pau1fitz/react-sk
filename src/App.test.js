@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 it('should render without crashing', () => {
+
   const div = document.createElement('div');
-  ReactDOM.render(<App.WrappedComponent />, div);
+
+  const getChatLog = () => {};
+  const getMembersData = () => {};
+
+  ReactDOM.render(<App.WrappedComponent getChatLog={getChatLog} getMembersData={getMembersData} />, div);
 });

@@ -54,7 +54,7 @@ class Messages extends Component {
 
 
 Messages.propTypes = {
-	msg: PropTypes.string,
+	msg: PropTypes.object,
 	name: PropTypes.string
 };
 

@@ -9,10 +9,10 @@ export const getChatLog = () => {
 
 };
 
-export const getMembersLog = () => {
+export const getMembersData = () => {
 
 	return {
-		type: 'USERS_LOADING',
+		type: 'MEMBERS_LOADING',
 		payload: getMembers()
 	};
 

@@ -10,7 +10,7 @@ export function reducer(state, action = {}) {
 				messages: action.payload
 			});
 
-		case 'USERS_LOADING_FULFILLED':
+		case 'MEMBERS_LOADING_FULFILLED':
 			return Object.assign({}, state, {
 				members: action.payload
 			});
