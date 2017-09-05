@@ -1,4 +1,4 @@
-import { getMessages, getMembers } from './data';
+import { getMessages, getMembers } from '../data/data';
 
 export const getChatLog = () => {
 

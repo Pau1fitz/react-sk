@@ -1,4 +1,4 @@
-import { reducer } from './store';
+import { reducer } from './index.js';
 
 it('should set messages in the store', () => {
  	const messages = [{

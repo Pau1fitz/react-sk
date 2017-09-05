@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import MessageList from './components/MessageList';
-import { getChatLog, getMembersData } from './service';
+import MessageList from '../components/MessageList';
+import { getChatLog, getMembersData } from '../actions';
 import './App.css';
 
 class App extends Component {
