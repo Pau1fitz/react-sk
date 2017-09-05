@@ -1,0 +1,11 @@
+ul {
+	list-style-type: none;
+}
+
+.messages-container {
+	position: relative;
+}
+
+.message {
+	cursor: pointer;
+}
